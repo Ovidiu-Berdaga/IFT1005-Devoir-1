@@ -1,0 +1,42 @@
+.page{
+    margin: 0px;
+}
+
+.image_debut{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: none;
+}
+
+.positionnement{
+    width: auto;
+    height: 101%;
+}
+
+.titre{
+    display: grid;
+    position: sticky;
+    text-align: center;
+    padding: auto;
+    background-color: lightgray;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.paragraph{
+    display: block;
+    text-align: center;
+}
+
+.img_accueil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img{
+    width: 200px;
+    height: 100px;
+}
