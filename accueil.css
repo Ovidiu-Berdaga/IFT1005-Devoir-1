@@ -1,5 +1,6 @@
 :root {
-  --font-menu: rgb(49, 47, 45)
+  --font-menu: rgb(49, 47, 45);
+  --ligne-couleur: #64bd5f;
 }
 
 * {
@@ -117,6 +118,69 @@ img {
     padding: 2em .7em 1em .7em;
     line-height: 1.4em;
   }
+
+  .conteneur_cartes {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 3em;
+    padding: 0 .7em 2em .7em;
+  }
+
+  .conteneur_cartes .carte {
+    width: 100%;
+  }
+
+  .carte picture {
+    position: absolute;
+    top: 0;
+    height: 350px;
+    width: 100%;
+  }
+
+  .carte picture img {
+    width: 100%;
+  }
+
+  .carte {
+    min-height: 400px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .conteneur_presentation {
+    padding: 1em 1em 1em 1em;
+    margin-top: 50%;
+    flex-grow: 1;
+    z-index: 80;
+    width: 85%;
+    background-color: var(--font-menu);
+    display: flex;
+    flex-flow: column;
+    gap: .5em;
+  }
+
+  .conteneur_presentation p, h3 {
+    color: white;
+  }
+
+  .conteneur_presentation p {
+    font-size: 5vw;
+  }
+
+  .conteneur_presentation h3 {
+    font-size: 6vw;
+  }
+
+  .conteneur_presentation .ligne {
+    width: 10%;
+    height: 2px;
+    background-color: var(--ligne-couleur);
+  }
+
 }
 
 @media only screen and (max-width: 768px) {}
