@@ -36,6 +36,34 @@
     text-align: center;
 }
 
+/* Section Découverte */
+
+#decouverte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+#decouverte p{
+    text-align: center;
+}
+
+svg{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+/* Section Galerie */
+#galerie{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content:center;
+    row-gap: 25px;
+    column-gap: 75px;
+}
+
 .img_découverte{
     display: flex;
     flex-direction: column;
@@ -44,4 +72,28 @@
 .img{
     width: 200px;
     height: 100px;
+}
+
+.img_gal{
+    width: 250px;
+    height: 150px;
+    border: 0px;
+}
+
+.fig_hover{
+    height: 150px;
+}
+
+.fig_cap{
+    display: none;
+}
+
+.img_gal:hover + .fig_cap{
+    display: flex;
+    justify-content: center;
+}
+
+.fig_hover:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s linear;
 }
