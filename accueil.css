@@ -68,8 +68,7 @@ nav {
     background-color: var(--font-menu);
     display: flex;
     align-items: center;
-    
-    padding: 1em;
+    padding: .5em 1em;
     gap: 1em;
     max-height: 80px;
   }
@@ -82,6 +81,7 @@ nav {
     overflow: hidden;
     border-bottom: 1px solid var(--ligne-couleur);
   }
+
   .navigation li a {
     font-size: 3vw;
     color: white;
@@ -108,12 +108,13 @@ nav {
   #presentation {
     position: absolute;
     bottom: 0;
+    
   }
 
 @media only screen and (max-width: 450px) {
   /* temp */
   #presentation {
-    height: 80px;
+    height: 45px;
   }
 
   .logo_header img {
@@ -133,13 +134,21 @@ nav {
 
   .titre {
     width: 75%;
-    padding: 2em;
+    padding: 2em 1em 2em 1em;
     margin-bottom: 1em;
     background-color: white;
     opacity: 0.8;
     display: flex;
     flex-flow: column;
     gap: 1em;
+  }
+
+  .titre h1 {
+    font-size: 1.3em;
+  }
+
+  .titre h2 {
+    font-size: 1em;
   }
 
   .paragraphe {
@@ -164,7 +173,6 @@ nav {
   .carte picture {
     position: absolute;
     top: 0;
-    height: 350px;
     width: 100%;
   }
 
@@ -173,7 +181,7 @@ nav {
   }
 
   .carte {
-    min-height: 400px;
+    min-height: 300px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -219,6 +227,7 @@ nav {
     gap: 2em;
     padding: 2em .7em 1.5em .7em;
   }
+
   footer .navigation_footer {
     align-self: flex-end;
     display: flex;
@@ -239,8 +248,8 @@ nav {
   }
 
   footer .logo_footer {
-    width: 6em;
-    height: 6em;
+    width: 4em;
+    height: 4em;
   }
 
   footer .ligne {
@@ -275,7 +284,7 @@ nav {
   }
 
   #presentation {
-    height: 96px;
+    height: 45px;
   }
   /* Hero */
 
@@ -321,8 +330,8 @@ nav {
 
   .paragraphe {
     text-align: left;
-    font-size: 5vw;
-    padding: 2em .7em 1em .7em;
+    font-size: 4vw;
+    padding: 2em .7em 2em .7em;
     line-height: 1.4em;
   }
 
@@ -377,7 +386,7 @@ nav {
   .conteneur_presentation p {
     padding-top: 5px;
     line-height: 1.3em;
-    font-size: 5vw;
+    font-size: 4vw;
   }
 
   .conteneur_presentation h3 {
