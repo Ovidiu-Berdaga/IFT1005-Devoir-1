@@ -97,3 +97,26 @@ svg{
     transform: scale(1.1);
     transition: transform 0.3s linear;
 }
+
+.creature {
+    animation: infinite alternate anim_creature 2s;
+}
+
+/*---------------------------------------------------
+                    animation
+---------------------------------------------------*/
+
+@keyframes anim_creature {
+    
+    0% {
+        transform: translateX(0) rotate(0);
+    }
+
+    15% {
+        transform: translateX(0) rotate(0);
+    }
+
+    100% {
+        transform: translateX(50%) rotate(360deg)
+    }
+}
