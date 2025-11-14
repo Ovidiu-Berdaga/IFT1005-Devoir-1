@@ -99,6 +99,37 @@
             <picture class="logo_footer"">
                 <img src="/images/park_logo.png" alt="logo_footer">
             </picture>
+            <svg xmlns=http://www.w3.org/2000/svg width="50%" height="100" style="margin-left: 25%; margin-right: 25%;">
+            <!-- pattes -->
+            <ellipse x="0" y="0" cx="50" cy="50" rx="5" ry="15" stroke="#0E0601" stroke-width="2" fill="black" transform="translate(60,-10) rotate(35)"/>
+            <ellipse x="0" y="0" cx="50" cy="50" rx="5" ry="15" stroke="#0E0601" stroke-width="2" fill="black" transform="translate(55,-5) rotate(25)"/>
+            <ellipse x="0" y="0" cx="50" cy="50" rx="5" ry="15" stroke="#0E0601" stroke-width="2" fill="black" transform="translate(65,45) rotate(-35)"/>
+            <ellipse x="0" y="0" cx="50" cy="50" rx="5" ry="15" stroke="#0E0601" stroke-width="2" fill="black" transform="translate(60,35) rotate(-25)"/>
+            <!-- corps -->
+            <ellipse x="0" y="0" cx="50" cy="50" rx="35" ry="15" stroke="#0E0601" stroke-width="2" fill="black" transform="translate(50,0)">
+            </ellipse>
+            <ellipse x="0" y="0"cx="50" cy="50" rx="25" ry="10" stroke="#0E0601" stroke-width="2" fill="black" transform="translate(80,-10)"/>
+            <path d="M 115 55 q 10 5 15 -5" stroke="white" stroke-width="6" fill="none"/>
+            <ellipse x="0" y="0" cx="50" cy="50" rx="8" ry="3" fill="#844A23" transform="translate(100,-6)"></ellipse>
+
+            <!-- oreille -->
+            <path d="M 130 29 q 10 -20 -15 5" stroke="black" stroke-width="6" fill="pink"/>
+            <!-- oeil -->
+            <radialGradient id="around_eye" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"\>
+                <stop offset="50%" stop-color="#A16842" stop-opacity="1" />
+                <stop offset="100%" stop-color="#844A23" stop-opacity="0.6" />
+            </radialGradient>
+            <ellipse x="0" y="0" cx="50" cy="50" rx="7" ry="5" fill="url(#around_eye)" transform="translate(90,-13)" />
+        
+            <radialGradient id="glimmer_eye" cx="15%" cy="15%">
+                <stop offset="0%" stop-color="white"/>
+                <stop offset="100%" stop-color="black"/>
+            </radialGradient>
+            <circle x="0" y="0" cx="50" cy="50" r="3" fill="url(#glimmer_eye)" transform="translate(90,-13)"/>
+            <!-- queue -->
+            <path d="M 45 45 q 20 5 30 3" stroke="black" stroke-width="10" fill="none"/>
+            <polygon points="46,40 42,42 47,45 40,48, 48,51" fill="black" />
+        </svg>
         </footer>
     </body>
 </html>
