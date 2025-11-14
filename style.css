@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  list-style: none;
   color: black;
   scroll-behavior: smooth;
   font-family: "Walter Turncoat", cursive;
@@ -21,6 +20,95 @@
 p {
   color: white;
   font-family: Manjari, sans-serif;
+}
+
+.creature {
+    width: 100px;
+    height: 50px;
+    animation: anim_creature 1s infinite;
+    transform-origin: left;
+    /* transform: translateX(-45%); */
+  }
+
+  @keyframes anim_creature {
+    0% {
+      transform: rotate(0deg) translateX(-25%);
+    }
+
+    25% {
+      transform: rotate(-15deg) translateX(-25%);
+    }
+
+    100% {
+      transform: rotate(0deg) translateX(-25%);
+    }
+  }
+
+  .conteneur_icones {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: flex-end;
+  }
+
+.liste {
+  color: white;
+  font-family: Manjari, sans-serif;
+  text-align: justify;
+  font-size: 1.5em;
+  margin-left: 5%;
+  width: 90%;
+}
+
+.liste b {
+  color: white;
+  text-align: justify;
+  font-size: 1em;
+  margin-left: 5%;
+  width: 90%;
+}
+
+.liste_ordre {
+  list-style: decimal;
+}
+
+.liste_deordre {
+  list-style: disc;
+}
+
+.titre_terrestre{
+  color: #824d0f;
+  background-color: white;
+  opacity: 60%;
+  transition: opacity 1s, color 1s;
+}
+
+.titre_terrestre:hover {
+  color: black;
+  opacity: 100%;
+}
+
+.titre_marin{
+  color: #1100ff;
+  background-color: white;
+  opacity: 60%;
+  transition: opacity 1s, color 1s;
+}
+
+.titre_marin:hover {
+  color: black;
+  opacity: 100%;
+}
+
+.titre_faune{
+  color: #d71425;
+  background-color: white;
+  opacity: 70%;
+  transition: opacity 1s, color 1s;
+}
+
+.titre_faune:hover {
+  color: black;
+  opacity: 100%;
 }
 
 .titre_dec, .titre_gal {
@@ -272,8 +360,10 @@ nav {
     flex-flow: column;
     padding-right: 1em;
     gap: 1em;
+    text-decoration: none;
+    list-style: none;
   }
-
+  
   .navigation_footer li {
     border-bottom: 1px solid var(--ligne-couleur);
     padding-bottom: .5em;
@@ -356,9 +446,8 @@ nav {
       font-size: 2em;
       margin-left: 10%;
       margin-bottom: 3%;
-      width: 80%;
+      width: fit-content;
       align-items: baseline;
-      color: white;
    }
 
     .titre_dec{
@@ -419,7 +508,7 @@ nav {
     padding-top: 70px;
   }
 
-  .conteneur_icones svg {
+  .conteneur_icones .svg {
     width: 40px;
     height: 40px;
   }
@@ -637,6 +726,7 @@ nav {
     padding-bottom: .5em;
     padding-left: .5em;
     text-align: right;
+    list-style: none;
   }
 
   .navigation_footer a {
@@ -713,9 +803,8 @@ nav {
       font-size: 2em;
       margin-left: 10%;
       margin-bottom: 3%;
-      width: 80%;
+      width: fit-content;
       align-items: baseline;
-      color: white;
    }
 
     .titre_dec{
@@ -779,10 +868,11 @@ nav {
     padding-top: 70px;
   }
 
-  .conteneur_icones svg {
+  .conteneur_icones .svg {
     width: 40px;
     height: 40px;
   }
+
   .conteneur_icones svg path {
     width: 100%;
     height: 100%;
@@ -839,7 +929,6 @@ nav {
     background-color: var(--font-menu);
     border-radius: 5px;
     padding: 1rem .5rem 1rem .5rem;
-    display: flex;
     gap: 1rem;
   }
 }
@@ -949,9 +1038,8 @@ nav {
       font-size: 2em;
       margin-left: 10%;
       margin-bottom: 3%;
-      width: 80%;
+      width: fit-content;
       align-items: baseline;
-      color: white;
    }
 
     .titre_dec{
@@ -1107,9 +1195,8 @@ nav {
       font-size: 2em;
       margin-left: 10%;
       margin-bottom: 3%;
-      width: 80%;
+      width: fit-content;
       align-items: baseline;
-      color: white;
    }
 
     .titre_dec{
