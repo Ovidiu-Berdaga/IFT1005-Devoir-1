@@ -10,10 +10,24 @@
   list-style: none;
   color: black;
   scroll-behavior: smooth;
+  font-family: "Walter Turncoat", cursive;
+  box-sizing: border-box;
+}
+
+#decouverte div p b {
+  color: white;
+}
+
+p {
+  color: white;
   font-family: Manjari, sans-serif;
 }
 
-header {
+.titre_dec, .titre_gal {
+  color: white;
+}
+
+.header_accueil {
   position: relative;
 }
 
@@ -22,6 +36,7 @@ header {
 }
 
 footer {
+  position: relative;
   background-color: var(--font-menu);
 }
 
@@ -35,7 +50,7 @@ picture {
     width: 100vw;
   }
 
-header {
+.header_accueil {
   height: 100vh;
   display: flex;
   flex-flow: column;
@@ -89,10 +104,12 @@ nav {
 
   .logo_header {
     width: fit-content;
-    padding-top: 6em;
+    margin-top: 6em;
     width: 4em;
     height: 4em;
     animation: infinite 2.5s battement;
+    box-sizing: initial;
+    overflow: hidden;
   }
 
   .logo_menu {
@@ -108,11 +125,31 @@ nav {
   #presentation {
     position: absolute;
     bottom: 0;
-    
   }
 
-@media only screen and (min-width: 450px) {
-  /* temp */
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    background-image: url("/images/image_1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  body .flou {
+    z-index: -1;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--font-menu);
+  }
+
+@media only screen and (max-width: 450px) {
   #presentation {
     height: 45px;
   }
@@ -120,6 +157,7 @@ nav {
   .logo_header img {
     width: 100%;
     height: 100%;
+    z-index: 99;
   }
 
   .image_header {
@@ -263,7 +301,7 @@ nav {
     height: 100%;
   }
 
-/* Section Galerie */
+  /* Section Galerie */
     #galerie{
         display: flex;
         flex-direction: column;
@@ -320,7 +358,7 @@ nav {
       margin-bottom: 3%;
       width: 80%;
       align-items: baseline;
-      color: black;
+      color: white;
    }
 
     .titre_dec{
@@ -333,10 +371,118 @@ nav {
       width: 50%;
   }
 
+  /*---------------------------------------------------
+                        Contact
+  ---------------------------------------------------*/
+  .section_contact {
+    margin-top: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+    justify-content: center;
+  }
+  
+  .section_contact h1 {
+    padding: 0 .5rem;
+    color: white;
+  }
 
+  .section_contact .formulaire_contact {
+    margin: 0 .5rem;
+    padding: 1rem .5rem 1rem .5rem;
+  }
+
+  .formulaire_contact li {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: .5em;
+  }
+
+  .formulaire_contact li input {
+    width: 100%;
+    height: 25px;
+  }
+
+  .formulaire_contact li span {
+    width: fit-content;
+    color: white;
+    border-bottom: 1px solid var(--ligne-couleur);
+  }
+
+  .formulaire_contact span {
+    width: 100%;
+  }
+
+  .header_contact {
+    padding-top: 70px;
+  }
+
+  .conteneur_icones svg {
+    width: 40px;
+    height: 40px;
+  }
+  .conteneur_icones svg path {
+    width: 100%;
+    height: 100%;
+  }
+
+  .formulaire_contact {
+    background-color: var(--font-menu);
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+  }
+
+  .formulaire_contact ul {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+  }
+
+  .conteneur_btn {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .conteneur_btn span {
+    width: fit-content;
+  }
+
+  .conteneur_btn span input {
+    color: white;
+  }
+
+  .conteneur_btn input {
+    padding: 10px;
+    border: none;
+    background-color: var(--ligne-couleur);
+    border-radius: 5px;
+  }
+
+  .conteneur_reseau {
+    display: flex;
+    flex-flow: column;
+    margin: 2rem .5rem;
+    gap: .5rem;
+  }
+
+  .conteneur_reseau h2 {
+    color: white;
+  }
+
+  .conteneur_icones {
+    background-color: var(--font-menu);
+    border-radius: 5px;
+    padding: 1rem .5rem 1rem .5rem;
+    display: flex;
+    gap: 1rem;
+  }
 }
 
-@media only screen and (max-width: 451px) {
+@media only screen and (min-width: 450px) {
   nav {
     max-height: 80px;
   }
@@ -346,7 +492,7 @@ nav {
   }
 
   .navigation li a {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 
   .logo_menu {
@@ -361,7 +507,7 @@ nav {
   /* Hero */
 
   .logo_header {
-    padding-top: 7em;
+    margin-top: 7em;
     width: 5em;
     height: 5em;
   }
@@ -513,7 +659,7 @@ nav {
     height: 100%;
   }
 
-/* Section Galerie */
+  /* Section Galerie */
     #galerie{
         display: flex;
         flex-direction: row;
@@ -569,7 +715,7 @@ nav {
       margin-bottom: 3%;
       width: 80%;
       align-items: baseline;
-      color: black;
+      color: white;
    }
 
     .titre_dec{
@@ -581,8 +727,121 @@ nav {
       margin-bottom: 5%;
       width: 50%;
   }
+  /*---------------------------------------------------
+                        Contact
+  ---------------------------------------------------*/
+  .section_contact {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .section_contact h1 {
+    width: 430px;
+    padding: 0 .5rem;
+    color: white;
+    align-self: center;
+  }
 
+  .section_contact .formulaire_contact {
+    margin: 0 .5rem;
+    padding: 1rem .5rem 1rem .5rem;
+    width: 430px;
+    align-self: center;
+  }
 
+  .formulaire_contact li {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: .5em;
+  }
+
+  .formulaire_contact li input {
+    width: 100%;
+    height: 25px;
+  }
+
+  .formulaire_contact li span {
+    width: fit-content;
+    color: white;
+    border-bottom: 1px solid var(--ligne-couleur);
+  }
+
+  .formulaire_contact span {
+    width: 100%;
+  }
+
+  .header_contact {
+    padding-top: 70px;
+  }
+
+  .conteneur_icones svg {
+    width: 40px;
+    height: 40px;
+  }
+  .conteneur_icones svg path {
+    width: 100%;
+    height: 100%;
+  }
+
+  .formulaire_contact {
+    background-color: var(--font-menu);
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+  }
+
+  .formulaire_contact ul {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+  }
+
+  .conteneur_btn {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .conteneur_btn span {
+    width: fit-content;
+  }
+
+  .conteneur_btn span input {
+    color: white;
+  }
+
+  .conteneur_btn input {
+    padding: 10px;
+    border: none;
+    background-color: var(--ligne-couleur);
+    border-radius: 5px;
+  }
+
+  .conteneur_reseau {
+    display: flex;
+    flex-flow: column;
+    margin: 2rem .5rem;
+    gap: .5rem;
+    width: 430px;
+    align-self: center;
+  }
+
+  .conteneur_reseau h2 {
+    color: white;
+  }
+
+  .conteneur_icones {
+    background-color: var(--font-menu);
+    border-radius: 5px;
+    padding: 1rem .5rem 1rem .5rem;
+    display: flex;
+    gap: 1rem;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -616,7 +875,7 @@ nav {
   }
 
   .logo_header {
-    padding-top: 6em;
+    margin-top: 6em;
     width: 4em;
     height: 4em;
   }
@@ -635,8 +894,7 @@ nav {
   .conteneur_presentation p {
     font-size: 3vw;
   }
-
-    /* Section Galerie */
+  /* Section Galerie */
     #galerie{
         display: flex;
         flex-direction: row;
@@ -693,7 +951,7 @@ nav {
       margin-bottom: 3%;
       width: 80%;
       align-items: baseline;
-      color: black;
+      color: white;
    }
 
     .titre_dec{
@@ -705,9 +963,7 @@ nav {
       margin-bottom: 5%;
       width: 50%;
   }
-
 }
-
 
 @media only screen and (min-width: 1000px) {
   .navigation li {
@@ -720,7 +976,6 @@ nav {
   .navigation li a {
     font-size: 1.5vw;
     border: none;
-    /* border-bottom: 1px solid var(--ligne-couleur); */
     padding-bottom: 3px;
   }
 
@@ -830,7 +1085,7 @@ nav {
     transform: translateX(0%);
   }
 
-    /* Section Découverte */
+  /* Section Découverte */
 
     #decouverte{
         display: flex;
@@ -897,9 +1152,26 @@ nav {
         margin-bottom: 5%;
         width: 20%;
     }
+
+  /*---------------------------------------------------
+                        Contact
+  ---------------------------------------------------*/ 
+  .btn {
+    transition: all .3s linear;
+  }
+
+  .btn:hover {
+    background-color: white;
+    color: var(--font-menu);
+  }
+
+  .conteneur_icones a svg path {
+    transition: all .2s linear;
+  }
+  .conteneur_icones a:hover svg path {
+    fill: var(--ligne-couleur);
+  }
 }
-
-
 
 @media only screen and (min-width: 1300px) {
     .img_gal{
@@ -908,4 +1180,24 @@ nav {
         transition: transform 0.3s linear;
         overflow: hidden;
         }
+}
+
+/* --------------- Animation --------------- */
+
+/* Logo mobile */
+@keyframes battement {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
