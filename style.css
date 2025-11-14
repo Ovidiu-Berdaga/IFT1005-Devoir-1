@@ -1,99 +1,911 @@
-.page{
-    margin: 0px;
+:root {
+  --font-menu: rgb(49, 47, 45);
+  --ligne-couleur: #64bd5f;
 }
 
-.navig{
-    position: sticky;
-    display: flex;
-    flex-direction: row;
-    background-color: darkslategrey;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  scroll-behavior: smooth;
+  font-family: Manjari, sans-serif;
 }
 
-.image_debut{
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+header {
+  position: relative;
 }
 
-.titre{
-    display: grid;
-    position:relative;
-    text-align: center;
-    padding: auto;
-    background-color: lightgray;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 300px;
-    opacity: 90%;
+.navigation_footer li a {
+    color: white;
 }
 
-.paragraph{
+footer {
+  background-color: var(--font-menu);
+}
+
+img {
+  display: block;
+}
+
+picture {
     display: block;
-    text-align: center;
+    overflow-x: hidden;
+    width: 100vw;
+  }
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* Section Découverte */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 99;
+}
 
-#decouverte{
+.ligne_menu {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(101%);
+  transition: all .3s;
+  width: 100%;
+  height: 2px;
+  background-color: var(--ligne-couleur);
+  display: none;
+}
+
+.navigation {
+    background-color: var(--font-menu);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 25px;
-}
+    padding: .5em 1em;
+    gap: 1em;
+    max-height: 80px;
+  }
 
-#decouverte p{
-    text-align: center;
-}
+  .navigation li:first-child {
+    border: none;
+  }
 
-svg{
-    margin-left: 25%;
-    margin-right: 25%;
-}
+  .navigation li {
+    overflow: hidden;
+    border-bottom: 1px solid var(--ligne-couleur);
+  }
+
+  .navigation li a {
+    font-size: 3vw;
+    color: white;
+  }
+
+  .logo_header {
+    width: fit-content;
+    padding-top: 6em;
+    width: 4em;
+    height: 4em;
+    animation: infinite 2.5s battement;
+  }
+
+  .logo_menu {
+    width: 2em;
+    height: 2em;
+  }
+
+  .logo_menu img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #presentation {
+    position: absolute;
+    bottom: 0;
+    
+  }
+
+@media only screen and (min-width: 450px) {
+  /* temp */
+  #presentation {
+    height: 45px;
+  }
+
+  .logo_header img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image_header {
+    z-index: -1;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url("images/image_1.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .titre {
+    width: 75%;
+    padding: 2em 1em 2em 1em;
+    margin-bottom: 1em;
+    background-color: white;
+    opacity: 0.8;
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+  }
+
+  .titre h1 {
+    font-size: 1.3em;
+  }
+
+  .titre h2 {
+    font-size: 1em;
+  }
+
+  .paragraphe {
+    text-align: left;
+    font-size: 6vw;
+    padding: 2em .7em 1em .7em;
+    line-height: 1.4em;
+  }
+
+  .conteneur_cartes {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 3em;
+    padding: 0 .7em 2em .7em;
+  }
+
+  .conteneur_cartes .carte {
+    width: 100%;
+  }
+
+  .carte picture {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .carte picture img {
+    width: 100%;
+  }
+
+  .carte {
+    min-height: 300px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .conteneur_presentation {
+    padding: 1em 1em 1em 1em;
+    margin-top: 50%;
+    flex-grow: 1;
+    z-index: 80;
+    width: 85%;
+    background-color: var(--font-menu);
+    display: flex;
+    flex-flow: column;
+    gap: .5em;
+  }
+
+  .conteneur_presentation p, h3 {
+    color: white;
+  }
+
+  .conteneur_presentation p {
+    padding-top: 5px;
+    font-size: 5vw;
+  }
+
+  .conteneur_presentation h3 {
+    font-size: 6vw;
+  }
+
+  .conteneur_presentation .ligne {
+    width: 10%;
+    height: 2px;
+    background-color: var(--ligne-couleur);
+  }
+
+  footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 2em;
+    padding: 2em .7em 1.5em .7em;
+  }
+
+  footer .navigation_footer {
+    align-self: flex-end;
+    display: flex;
+    flex-flow: column;
+    padding-right: 1em;
+    gap: 1em;
+  }
+
+  .navigation_footer li {
+    border-bottom: 1px solid var(--ligne-couleur);
+    padding-bottom: .5em;
+    padding-left: .5em;
+    text-align: right;
+  }
+
+  .navigation_footer a {
+    font-size: 5vw;
+  }
+
+  footer .logo_footer {
+    width: 4em;
+    height: 4em;
+  }
+
+  footer .ligne {
+    width: 95%;
+    height: 1px;
+    background-color: var(--ligne-couleur);
+  }
+
+  .logo_footer img {
+    width: 100%;
+    height: 100%;
+  }
 
 /* Section Galerie */
-#galerie{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content:center;
-    row-gap: 25px;
-    column-gap: 75px;
+    #galerie{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content:center;
+        overflow: hidden;
+        row-gap: 25px;
+        column-gap: 75px;
+        padding-bottom: 10%;
+        padding-top: 2%;
+    }
+
+    .img_gal{
+        width: 250px;
+        height: 150px;
+        transition: transform 0.3s linear;
+        overflow: hidden;
+    }
+
+    .img_gal:hover{
+        transform: scale(1.1);
+    }
+
+    .titre_gal{
+        text-align: center;
+        font-size: 7vw;
+        overflow: hidden;
+        border-bottom: 1px solid var(--ligne-couleur);
+        margin-left: 25%;
+        margin-bottom: 5%;
+        width: 50%;
+    }
+    /* Section Découverte */
+
+    #decouverte{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 3%;
+    }
+
+    #decouverte p{
+        text-align: justify;
+        font-size: 1.5em;
+        margin-left: 5%;
+        width: 90%;
+    }
+    
+    #decouverte h3{
+      font-size: 2em;
+      margin-left: 10%;
+      margin-bottom: 3%;
+      width: 80%;
+      align-items: baseline;
+      color: black;
+   }
+
+    .titre_dec{
+      text-align: center;
+      font-size: 6vw;
+      overflow: hidden;
+      border-bottom: 1px solid var(--ligne-couleur);
+      margin-left: 25%;
+      margin-bottom: 5%;
+      width: 50%;
+  }
+
+
 }
 
-.img_découverte{
+@media only screen and (max-width: 451px) {
+  nav {
+    max-height: 80px;
+  }
+  .navigation {
+    padding: .5em 1em .5em 1em;
+    gap: 2em;
+  }
+
+  .navigation li a {
+    font-size: 2vw;
+  }
+
+  .logo_menu {
+    display: block;
+    width: 2em;
+    height: 2em;
+  }
+
+  #presentation {
+    height: 45px;
+  }
+  /* Hero */
+
+  .logo_header {
+    padding-top: 7em;
+    width: 5em;
+    height: 5em;
+  }
+
+  .logo_header img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image_header {
+    z-index: -1;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url("images/image_1.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .titre {
+    width: 75%;
+    padding: 3em;
+    margin-bottom: 2em;
+    background-color: white;
+    opacity: 0.8;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
+    gap: 1em;
+  }
+
+  .titre h1 {
+    font-size: 2em;
+  }
+
+  .titre h2 {
+    font-size: 1em;
+  }
+
+  .paragraphe {
+    text-align: left;
+    font-size: 4vw;
+    padding: 2em .7em 2em .7em;
+    line-height: 1.4em;
+  }
+
+  .conteneur_cartes {
+    display: flex;
+    flex-flow: column;
     align-items: center;
-}
-.img{
-    width: 200px;
-    height: 100px;
+    gap: 5em;
+    padding: 0 2em 5em 2em;
+  }
+
+  .conteneur_cartes .carte {
+    width: 100%;
+  }
+
+  .carte picture {
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  .carte picture img {
+    width: 100%;
+  }
+
+  .carte {
+    min-height: 400px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .conteneur_presentation {
+    padding: 1em 1em 2em 1em;
+    margin-top: 50%;
+    flex-grow: 1;
+    z-index: 80;
+    width: 90%;
+    background-color: var(--font-menu);
+    display: flex;
+    flex-flow: column;
+    gap: .5em;
+  }
+
+  .conteneur_presentation p, h3 {
+    color: white;
+  }
+
+  .conteneur_presentation p {
+    padding-top: 5px;
+    line-height: 1.3em;
+    font-size: 4vw;
+  }
+
+  .conteneur_presentation h3 {
+    font-size: 6vw;
+  }
+
+  .conteneur_presentation .ligne {
+    width: 10%;
+    height: 2px;
+    background-color: var(--ligne-couleur);
+  }
+
+  footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 2em;
+    padding: 2em .7em 1.5em .7em;
+  }
+  footer .navigation_footer {
+    align-self: flex-end;
+    display: flex;
+    flex-flow: column;
+    padding-right: 1em;
+    gap: 1em;
+  }
+
+  .navigation_footer li {
+    border-bottom: 1px solid var(--ligne-couleur);
+    padding-bottom: .5em;
+    padding-left: .5em;
+    text-align: right;
+  }
+
+  .navigation_footer a {
+    font-size: 5vw;
+  }
+
+  footer .logo_footer {
+    width: 6em;
+    height: 6em;
+  }
+
+  footer .ligne {
+    width: 95%;
+    height: 1px;
+    background-color: var(--ligne-couleur);
+  }
+
+  .logo_footer img {
+    width: 100%;
+    height: 100%;
+  }
+
+/* Section Galerie */
+    #galerie{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:center;
+        row-gap: 25px;
+        column-gap: 35px;
+        padding-bottom: 10%;
+        padding-top: 2%;
+    }
+
+    .img_gal{
+        width: 250px;
+        height: 150px;
+        transition: transform 0.3s linear;
+        overflow: hidden;
+    }
+
+    .img_gal:hover{
+        transform: scale(1.1);
+    }
+
+    .titre_gal{
+        text-align: center;
+        font-size: 2em;
+        overflow: hidden;
+        border-bottom: 1px solid var(--ligne-couleur);
+        margin-left: 30%;
+        margin-bottom: 5%;
+        width: 40%;
+    }
+    /* Section Découverte */
+
+    #decouverte{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 3%;  
+    }
+
+    #decouverte p{
+        text-align: justify;
+        font-size: 1.5em;
+        margin-left: 5%;
+        width: 90%;
+    }
+    
+    #decouverte h3{
+      font-size: 2em;
+      margin-left: 10%;
+      margin-bottom: 3%;
+      width: 80%;
+      align-items: baseline;
+      color: black;
+   }
+
+    .titre_dec{
+      text-align: center;
+      font-size: 6vw;
+      overflow: hidden;
+      border-bottom: 1px solid var(--ligne-couleur);
+      margin-left: 25%;
+      margin-bottom: 5%;
+      width: 50%;
+  }
+
+
 }
 
-.img_gal{
+@media only screen and (min-width: 600px) {
+  nav {
+    max-height: 70px;
+  }
+  .navigation {
+    padding: .7em .5em .7em .5em;
+    gap: 2em;
+  }
+
+  .navigation li a {
+    font-size: 2vw;
+    border-bottom: 1px solid var(--ligne-couleur);
+    padding-bottom: 3px;
+  }
+
+  .logo_menu {
+    display: block;
+    width: 2em;
+    height: 2em;
+  }
+
+  .titre {
+    padding: 1em;
+    width: 90%;
+  }
+
+  .titre h2 {
+    font-size: 1.5em;
+  }
+
+  .logo_header {
+    padding-top: 6em;
+    width: 4em;
+    height: 4em;
+  }
+  #presentation {
+    height: 50px;
+  }
+
+  .paragraphe {
+    font-size: 3vw;
+  }
+
+  .conteneur_cartes {
+    padding: 2em 5em 4em 5em;
+  }
+
+  .conteneur_presentation p {
+    font-size: 3vw;
+  }
+
+    /* Section Galerie */
+    #galerie{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:center;
+        row-gap: 25px;
+        column-gap: 35px;
+        padding-bottom: 10%;
+        padding-top: 2%;
+    }
+
+    .img_gal{
+        width: 310px;
+        height: 175px;
+        transition: transform 0.3s linear;
+        overflow: hidden;
+    }
+
+    .img_gal:hover{
+        transform: scale(1.1);
+    }
+
+    .titre_gal{
+        text-align: center;
+        font-size: 2em;
+        overflow: hidden;
+        border-bottom: 1px solid var(--ligne-couleur);
+        margin-left: 35%;
+        margin-bottom: 5%;
+        width: 30%;
+    }
+
+    /* Section Découverte */
+
+    #decouverte{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 3%;
+    }
+
+    #decouverte p{
+        text-align: justify;
+        font-size: 1.5em;
+        margin-left: 5%;
+        width: 90%;
+    }
+    
+    #decouverte h3{
+      font-size: 2em;
+      margin-left: 10%;
+      margin-bottom: 3%;
+      width: 80%;
+      align-items: baseline;
+      color: black;
+   }
+
+    .titre_dec{
+      text-align: center;
+      font-size: 6vw;
+      overflow: hidden;
+      border-bottom: 1px solid var(--ligne-couleur);
+      margin-left: 25%;
+      margin-bottom: 5%;
+      width: 50%;
+  }
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .navigation li {
+    position: relative;
+    border: none;
+  }
+  .ligne_menu {
+    display: block;
+  }
+  .navigation li a {
+    font-size: 1.5vw;
+    border: none;
+    /* border-bottom: 1px solid var(--ligne-couleur); */
+    padding-bottom: 3px;
+  }
+
+  .navigation li a:hover ~ .ligne_menu {
+    transform: translateX(0%);
+  }
+
+  .titre {
+    width: 60%;
+    align-self: flex-start;
+    margin-left: 2em;
+    padding-left: 2em;
+  }
+
+  .paragraphe {
+    font-size: 2vw;
+    padding-left: 2em;
+  }
+
+  .conteneur_cartes {
+    padding: 2em 1em 4em 1em;
+    flex-flow: row;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  .conteneur_cartes .carte {
+    width: 300px;
+    height: auto;
+    min-height: auto;
+  }
+
+  .conteneur_cartes .carte:hover picture img {
+    transform: scale(1.1);
+  }
+  
+  .carte picture {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carte picture img {
+    width: 100%;
+    transition: all 1s;
+  }
+
+  .conteneur_presentation {
     width: 250px;
-    height: 150px;
-    border: 0px;
-}
+  }
 
-.fig_hover{
-    height: 150px;
-}
+  .conteneur_presentation h3 {
+    font-size: 2vw;
+  }
 
-.fig_cap{
-    display: none;
-}
+  .conteneur_presentation p {
+    font-size: 1vw;
+  }
 
-.img_gal:hover + .fig_cap{
+  footer .navigation_footer li {
+    overflow: hidden;
+  }
+
+  footer .navigation_footer li {
+    position: relative;
+    border: none;
+  }
+
+  footer {
+    flex-flow: row-reverse;
+    justify-content: space-evenly;
+  }
+
+  footer .ligne {
+   display: none;
+  }
+
+  footer .logo_footer {
+    flex-grow: 1;
+    width: auto;
+    height: 100%;
+    align-self: center;
     display: flex;
     justify-content: center;
+  }
+
+  footer .logo_footer img {
+    width: 5em;
+    height: 5em;
+  }
+
+  footer .navigation_footer {
+    width: 50%;
+    border-left: 2px solid var(--ligne-couleur);
+  }
+
+  footer .navigation_footer li {
+    width: fit-content;
+    align-self: flex-end;
+  }
+
+  footer .navigation_footer li a {
+    font-size: 1.5vw;
+    border: none;
+  }
+
+  .navigation_footer li a:hover ~ .ligne_menu {
+    transform: translateX(0%);
+  }
+
+    /* Section Découverte */
+
+    #decouverte{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 5%;
+    }
+
+    #decouverte p{
+        text-align: justify;
+        font-size: 1.5em;
+        margin-left: 5%;
+        width: 90%;
+    }
+    
+    #decouverte h3{
+      font-size: 2em;
+      margin-left: 10%;
+      margin-bottom: 3%;
+      width: 80%;
+      align-items: baseline;
+      color: black;
+   }
+
+    .titre_dec{
+        text-align: center;
+        font-size: 2em;
+        overflow: hidden;
+        border-bottom: 1px solid var(--ligne-couleur);
+        margin-left: 25%;
+        margin-bottom: 5%;
+        width: 50%;
+    }
+
+    /* Section Galerie */
+    #galerie{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content:center;
+        row-gap: 25px;
+        column-gap: 35px;
+        padding-bottom: 10%;
+        padding-top: 2%;
+    }
+    .img_gal{
+        width: 310px;
+        height: 175px;
+        transition: transform 0.3s linear;
+        overflow: hidden;
+    }
+
+    .img_gal:hover{
+        transform: scale(1.1);
+    }
+
+    .titre_gal{
+        text-align: center;
+        font-size: 2em;
+        overflow: hidden;
+        border-bottom: 1px solid var(--ligne-couleur);
+        margin-left: 40%;
+        margin-bottom: 5%;
+        width: 20%;
+    }
 }
 
-.fig_hover:hover{
-    transform: scale(1.1);
-    transition: transform 0.3s linear;
+
+
+@media only screen and (min-width: 1300px) {
+    .img_gal{
+        width: 400px;
+        height: 225px;
+        transition: transform 0.3s linear;
+        overflow: hidden;
+        }
 }
