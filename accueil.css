@@ -10,20 +10,11 @@
   list-style: none;
   color: black;
   scroll-behavior: smooth;
-  font-family: "Walter Turncoat", cursive;
+  font-family: Manjari, sans-serif;
   box-sizing: border-box;
 }
 
-#decouverte div p b {
-  color: white;
-}
-
 p {
-  color: white;
-  font-family: Manjari, sans-serif;
-}
-
-.titre_dec, .titre_gal {
   color: white;
 }
 
@@ -36,7 +27,6 @@ p {
 }
 
 footer {
-  position: relative;
   background-color: var(--font-menu);
 }
 
@@ -150,6 +140,7 @@ nav {
   }
 
 @media only screen and (max-width: 450px) {
+  /* temp */
   #presentation {
     height: 45px;
   }
@@ -301,76 +292,6 @@ nav {
     height: 100%;
   }
 
-  /* Section Galerie */
-    #galerie{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content:center;
-        overflow: hidden;
-        row-gap: 25px;
-        column-gap: 75px;
-        padding-bottom: 10%;
-        padding-top: 2%;
-    }
-
-    .img_gal{
-        width: 250px;
-        height: 150px;
-        transition: transform 0.3s linear;
-        overflow: hidden;
-    }
-
-    .img_gal:hover{
-        transform: scale(1.1);
-    }
-
-    .titre_gal{
-        text-align: center;
-        font-size: 7vw;
-        overflow: hidden;
-        border-bottom: 1px solid var(--ligne-couleur);
-        margin-left: 25%;
-        margin-bottom: 5%;
-        width: 50%;
-    }
-    /* Section Découverte */
-
-    #decouverte{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-        margin-bottom: 3%;
-    }
-
-    #decouverte p{
-        text-align: justify;
-        font-size: 1.5em;
-        margin-left: 5%;
-        width: 90%;
-    }
-    
-    #decouverte h3{
-      font-size: 2em;
-      margin-left: 10%;
-      margin-bottom: 3%;
-      width: 80%;
-      align-items: baseline;
-      color: white;
-   }
-
-    .titre_dec{
-      text-align: center;
-      font-size: 6vw;
-      overflow: hidden;
-      border-bottom: 1px solid var(--ligne-couleur);
-      margin-left: 25%;
-      margin-bottom: 5%;
-      width: 50%;
-  }
-
   /*---------------------------------------------------
                         Contact
   ---------------------------------------------------*/
@@ -482,7 +403,7 @@ nav {
   }
 }
 
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 451px) {
   nav {
     max-height: 80px;
   }
@@ -659,74 +580,6 @@ nav {
     height: 100%;
   }
 
-  /* Section Galerie */
-    #galerie{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content:center;
-        row-gap: 25px;
-        column-gap: 35px;
-        padding-bottom: 10%;
-        padding-top: 2%;
-    }
-
-    .img_gal{
-        width: 250px;
-        height: 150px;
-        transition: transform 0.3s linear;
-        overflow: hidden;
-    }
-
-    .img_gal:hover{
-        transform: scale(1.1);
-    }
-
-    .titre_gal{
-        text-align: center;
-        font-size: 2em;
-        overflow: hidden;
-        border-bottom: 1px solid var(--ligne-couleur);
-        margin-left: 30%;
-        margin-bottom: 5%;
-        width: 40%;
-    }
-    /* Section Découverte */
-
-    #decouverte{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-        margin-bottom: 3%;  
-    }
-
-    #decouverte p{
-        text-align: justify;
-        font-size: 1.5em;
-        margin-left: 5%;
-        width: 90%;
-    }
-    
-    #decouverte h3{
-      font-size: 2em;
-      margin-left: 10%;
-      margin-bottom: 3%;
-      width: 80%;
-      align-items: baseline;
-      color: white;
-   }
-
-    .titre_dec{
-      text-align: center;
-      font-size: 6vw;
-      overflow: hidden;
-      border-bottom: 1px solid var(--ligne-couleur);
-      margin-left: 25%;
-      margin-bottom: 5%;
-      width: 50%;
-  }
   /*---------------------------------------------------
                         Contact
   ---------------------------------------------------*/
@@ -740,7 +593,7 @@ nav {
   }
   
   .section_contact h1 {
-    width: 430px;
+    width: 450px;
     padding: 0 .5rem;
     color: white;
     align-self: center;
@@ -749,7 +602,7 @@ nav {
   .section_contact .formulaire_contact {
     margin: 0 .5rem;
     padding: 1rem .5rem 1rem .5rem;
-    width: 430px;
+    width: 450px;
     align-self: center;
   }
 
@@ -827,7 +680,7 @@ nav {
     flex-flow: column;
     margin: 2rem .5rem;
     gap: .5rem;
-    width: 430px;
+    width: 450px;
     align-self: center;
   }
 
@@ -893,75 +746,6 @@ nav {
 
   .conteneur_presentation p {
     font-size: 3vw;
-  }
-  /* Section Galerie */
-    #galerie{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content:center;
-        row-gap: 25px;
-        column-gap: 35px;
-        padding-bottom: 10%;
-        padding-top: 2%;
-    }
-
-    .img_gal{
-        width: 310px;
-        height: 175px;
-        transition: transform 0.3s linear;
-        overflow: hidden;
-    }
-
-    .img_gal:hover{
-        transform: scale(1.1);
-    }
-
-    .titre_gal{
-        text-align: center;
-        font-size: 2em;
-        overflow: hidden;
-        border-bottom: 1px solid var(--ligne-couleur);
-        margin-left: 35%;
-        margin-bottom: 5%;
-        width: 30%;
-    }
-
-    /* Section Découverte */
-
-    #decouverte{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-        margin-bottom: 3%;
-    }
-
-    #decouverte p{
-        text-align: justify;
-        font-size: 1.5em;
-        margin-left: 5%;
-        width: 90%;
-    }
-    
-    #decouverte h3{
-      font-size: 2em;
-      margin-left: 10%;
-      margin-bottom: 3%;
-      width: 80%;
-      align-items: baseline;
-      color: white;
-   }
-
-    .titre_dec{
-      text-align: center;
-      font-size: 6vw;
-      overflow: hidden;
-      border-bottom: 1px solid var(--ligne-couleur);
-      margin-left: 25%;
-      margin-bottom: 5%;
-      width: 50%;
   }
 }
 
@@ -1085,74 +869,6 @@ nav {
     transform: translateX(0%);
   }
 
-  /* Section Découverte */
-
-    #decouverte{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-        margin-bottom: 5%;
-    }
-
-    #decouverte p{
-        text-align: justify;
-        font-size: 1.5em;
-        margin-left: 5%;
-        width: 90%;
-    }
-    
-    #decouverte h3{
-      font-size: 2em;
-      margin-left: 10%;
-      margin-bottom: 3%;
-      width: 80%;
-      align-items: baseline;
-      color: black;
-   }
-
-    .titre_dec{
-        text-align: center;
-        font-size: 2em;
-        overflow: hidden;
-        border-bottom: 1px solid var(--ligne-couleur);
-        margin-left: 25%;
-        margin-bottom: 5%;
-        width: 50%;
-    }
-
-    /* Section Galerie */
-    #galerie{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content:center;
-        row-gap: 25px;
-        column-gap: 35px;
-        padding-bottom: 10%;
-        padding-top: 2%;
-    }
-    .img_gal{
-        width: 310px;
-        height: 175px;
-        transition: transform 0.3s linear;
-        overflow: hidden;
-    }
-
-    .img_gal:hover{
-        transform: scale(1.1);
-    }
-
-    .titre_gal{
-        text-align: center;
-        font-size: 2em;
-        overflow: hidden;
-        border-bottom: 1px solid var(--ligne-couleur);
-        margin-left: 40%;
-        margin-bottom: 5%;
-        width: 20%;
-    }
-
   /*---------------------------------------------------
                         Contact
   ---------------------------------------------------*/ 
@@ -1173,14 +889,6 @@ nav {
   }
 }
 
-@media only screen and (min-width: 1300px) {
-    .img_gal{
-        width: 400px;
-        height: 225px;
-        transition: transform 0.3s linear;
-        overflow: hidden;
-        }
-}
 
 /* --------------- Animation --------------- */
 
