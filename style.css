@@ -652,6 +652,7 @@ nav {
 
   .conteneur_cartes .carte {
     width: 100%;
+    align-self: flex-start;
   }
 
   .carte picture {
@@ -677,7 +678,6 @@ nav {
   .conteneur_presentation {
     padding: 1em 1em 2em 1em;
     margin-top: 50%;
-    flex-grow: 1;
     z-index: 80;
     width: 90%;
     background-color: var(--font-menu);
